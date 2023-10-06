@@ -1,9 +1,9 @@
 # Aula0610
 
-npm install -g anfular-cli
-ng new nome-projeto
-cd nome-projeto
-code .
-no terminal do vscode:
-npm install @angular/material
-npm start
+npm install -g anfular-cli <br>
+ng new nome-projeto<br>
+cd nome-projeto<br>
+code .<br>
+no terminal do vscode:<br>
+npm install @angular/material<br>
+npm start<br>
