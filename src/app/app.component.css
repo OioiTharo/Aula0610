@@ -40,9 +40,13 @@ section {
   align-items: center;
 }
 
-.total{
-    background-color: #b3c4fe;
+.corsim{
+    background-color: #c2185b;
+    color: white;
+    padding-left: 10px;
 }
-.pendentes{
-    background-color: #fef57f;
+.cornao{
+    background-color: #595959;
+    color: white;
+    padding-left: 10px;
 }

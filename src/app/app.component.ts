@@ -30,8 +30,17 @@ export class AppComponent {
 
   get totalDePendentes(): number{
     return this.tarefas.filter(tarefa=>tarefa.situacao === "Pendente").length
-
   }
+
+  get totalDeFazendo(): number{
+    return this.tarefas.filter(tarefa=>tarefa.situacao === "Fazendo").length
+  }
+
+  get  totalDeConcluidos(): number{
+    return this.tarefas.filter(tarefa=>tarefa.situacao === "Concluido").length
+  }
+ 
+
   alterarSituacao(tarefa: Task, situacao: string): void{
     tarefa.situacao = situacao
   }
