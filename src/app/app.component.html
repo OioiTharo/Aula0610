@@ -1,21 +1,39 @@
-<mat-slide-toggle>Toggle me!</mat-slide-toggle>
+<!--<mat-slide-toggle>Toggle me!</mat-slide-toggle>-->
+<main id="main">
+  <section>
+    <h2 class="container mat-elevation-z8 total">
+      <mat-icon>format_list_bulleted</mat-icon>
+      Total de tarefas: {{totalDeTarefas}}
+    </h2>
+    <h2 class="container mat-elevation-z8 pendentes">
+      <mat-icon>schedule</mat-icon> 
+      Pendentes: {{totalDePendentes}}
+    </h2>
+  </section>
 
-<mat-expansion-panel> 
-  <mat-expansion-panel-header>
-    <mat-panel-title>
-      <h2>Titulo</h2>
-    </mat-panel-title>
-    <mat-panel-description>
-     <!--Descricao-->
-    </mat-panel-description>
-  </mat-expansion-panel-header>
-  <mat-chip-listbox aria-label="Fish selection">
-    <mat-chip-option selected>A fazer</mat-chip-option>
-    <mat-chip-option>Fazendo</mat-chip-option>
-    <mat-chip-option>Conluido</mat-chip-option>
-  </mat-chip-listbox>
-</mat-expansion-panel>
 
-<button (click)="openDialog()" mat-fab color="primary">
-  <mat-icon>add</mat-icon>
-</button>
+
+  <div *ngFor="let tarefa of tarefas">
+    <mat-expansion-panel>
+      <h2 class="titulo">{{tarefa.descricao}}</h2>
+      <mat-chip-listbox aria-label="Fish selection">
+        <mat-chip-option (click)="alterarSituacao(tarefa, 'Pendente')">A Fazer</mat-chip-option>
+        <mat-chip-option (click)="alterarSituacao(tarefa, 'Fazendo')">Fazendo</mat-chip-option>
+        <mat-chip-option (click)="alterarSituacao(tarefa, 'Concluido')">Concluido</mat-chip-option>
+      </mat-chip-listbox>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <h1>{{tarefa.name}}</h1>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <mat-panel-description>
+      </mat-panel-description>
+    </mat-expansion-panel>
+
+
+  </div>
+
+  <button (click)="openDialog()" mat-fab color="primary">
+    <mat-icon>add</mat-icon>
+  </button>
+</main>
