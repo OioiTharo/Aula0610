@@ -1,5 +1,6 @@
 <!--<mat-slide-toggle>Toggle me!</mat-slide-toggle>-->
 <main id="main">
+
   <section>
     <h2 class="container mat-elevation-z8 corsim">
       <mat-icon>format_list_bulleted</mat-icon>
@@ -10,7 +11,7 @@
       Pendentes: {{totalDePendentes}}
     </h2>
     <h2 class="container mat-elevation-z8 cornao">
-      <mat-icon>slow_motion_video</mat-icon> 
+      <mat-icon>slow_motion_video</mat-icon>
       Fazendo: {{totalDeFazendo}}
     </h2>
     <h2 class="container mat-elevation-z8 corsim">
@@ -19,11 +20,11 @@
     </h2>
   </section>
 
-
+  <h1>Tarefas </h1>
 
   <div *ngFor="let tarefa of tarefas">
     <mat-expansion-panel>
-      <h2 class="titulo">{{tarefa.descricao}}</h2>
+      <h3>{{tarefa.descricao}}</h3>
       <mat-chip-listbox aria-label="Fish selection">
         <mat-chip-option (click)="alterarSituacao(tarefa, 'Pendente')">A Fazer</mat-chip-option>
         <mat-chip-option (click)="alterarSituacao(tarefa, 'Fazendo')">Fazendo</mat-chip-option>
@@ -31,7 +32,7 @@
       </mat-chip-listbox>
       <mat-expansion-panel-header>
         <mat-panel-title>
-          <h1>{{tarefa.name}}</h1>
+          <h2 class="titulo">{{tarefa.name}}</h2>
         </mat-panel-title>
       </mat-expansion-panel-header>
       <mat-panel-description>
